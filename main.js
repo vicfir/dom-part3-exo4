@@ -13,10 +13,10 @@ let count = 0;
 for (const key in competences) {
     elements[count].textContent+=` ${competences[key]}`;
 
-    if (Number(competences[key].slice(0, -1))>50 && Number(competences[key].slice(0, -1))!=100) {
+    if (Number(competences[key].slice(0, -1))<50) {
         elements[count].style.backgroundColor = "red";
         
-    } else if (Number(competences[key].slice(0, -1))<50) {
+    } else if (Number(competences[key].slice(0, -1)) > 50  && Number(competences[key].slice(0, -1))!=100) {
         elements[count].style.backgroundColor = "green";
         elements[count].style.color ="white";
         
